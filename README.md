@@ -1,53 +1,47 @@
 # stylelint-config-udyux
 
-Turns off all rules that are unnecessary or might conflict with Prettier. This lets you use your favorite shareable config without letting its stylistic choices get in the way when using Prettier.
+> An opinionated and portable [stylelint](https://stylelint.io/) config built around [BEM](http://getbem.com/)
 
 ## Installation
 
-Install `stylelint-config-prettier`:
-
+```bash
+$ npm install -D stylelint-config-udyux
+# or
+$ yarn add --dev stylelint-config-udyux
 ```
-$ npm install --save-dev stylelint-config-prettier
-```
 
-Then, add `stylelint-config-prettier` to the `extends` array in your `.stylelintrc.*` file. Make sure to put it **last,** so it will override other configs.
+## Usage
 
-```json
+Add `stylelint-config-udyux` to the `extends` array in your `.stylelintrc.*` file.
+
+```javascript
 {
-  "extends": ["stylelint-config-prettier"]
+  extends: [
+    // ...
+    "stylelint-config-udyux"
+  ]
 }
 ```
 
-## CLI helper tool
+_Don't forget that extended configs are merged in order, so the last entry takes precedence over the others in case of rule conflicts._
 
-`stylelint-config-prettier` is shipped with a little CLI tool to help you check if your configuration contains any rules that are in conflict with Prettier.
+## Documentation
 
-In order to execute the CLI tool, first add a script for it to `package.json`:
+### Plugins
 
-```json
-{
-  "scripts": {
-    "stylelint-check": "stylelint-config-prettier-check"
-  }
-}
-```
+This config makes use of the following plugins:
 
-Then run `npm run stylelint-check`.
+- [stylelint-order](https://github.com/hudochenkov/stylelint-order)
+- [stylelint-declaration-strict-value](https://github.com/AndyOGo/stylelint-declaration-strict-value)
+- [stylelint-declaration-block-no-ignored-properties](https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties)
 
-## Attribution
+### Extended configs
 
-- Insprired by [`eslint-config-prettier`](http://npm.im/eslint-config-prettier).
-- CLI helper inspired by [`tslint-config-prettier`](https://github.com/alexjoverm/tslint-config-prettier).
-- Original disabled ruleset copied from [`prettier-stylelint`](http://npm.im/prettier-stylelint).
+This config extends the following configs:
+
+- [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
+- [stylelint-config-recommended-scss](https://github.com/kristerkari/stylelint-config-recommended-scss)
 
 ---
 
-[MIT](license)
-
-[coveralls-img]: http://img.shields.io/coveralls/shannonmoeller/stylelint-config-prettier/master.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/shannonmoeller/stylelint-config-prettier
-[downloads-img]: http://img.shields.io/npm/dm/stylelint-config-prettier.svg?style=flat-square
-[npm-img]: http://img.shields.io/npm/v/stylelint-config-prettier.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/stylelint-config-prettier
-[travis-img]: http://img.shields.io/travis/prettier/stylelint-config-prettier.svg?style=flat-square
-[travis-url]: https://travis-ci.org/prettier/stylelint-config-prettier
+Licensed under [MIT](LICENSE)

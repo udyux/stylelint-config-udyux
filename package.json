@@ -1,9 +1,17 @@
 {
   "name": "stylelint-config-udyux",
-  "version": "0.0.5",
+  "version": "0.0.7",
+  "description": "An opinionated and portable stylelint config built around BEM",
+  "author": "Nicolas Udy <dev@udy.io>",
+  "main": "index.js",
+  "files": [
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/udyux/stylelint-config-udyux.git"
+  },
   "license": "MIT",
-  "main": "stylelintrc.js",
-  "files": ["src/*"],
   "dependencies": {
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
@@ -22,5 +30,8 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "stylelint": "^9.8.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">=9"
   }
 }
