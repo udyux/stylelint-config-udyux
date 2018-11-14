@@ -5,7 +5,7 @@
   "author": "Nicolas Udy <dev@udy.io>",
   "main": "index.js",
   "files": [
-    "src/**"
+    "rules/*"
   ],
   "repository": {
     "type": "git",
