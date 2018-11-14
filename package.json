@@ -1,8 +1,8 @@
 {
   "name": "stylelint-config-udyux",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "stylelintrc.js",
   "dependencies": {
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
