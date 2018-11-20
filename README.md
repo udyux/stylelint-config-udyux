@@ -1,13 +1,13 @@
 # stylelint-config-udyux
 
-> An opinionated and portable [stylelint](https://stylelint.io/) config built around [BEM](http://getbem.com/)
+> An opinionated and portable [stylelint](https://stylelint.io/) config built around [BEM](http://getbem.com/).
 
 ## Installation
 
 ```bash
 $ npm install -D stylelint-config-udyux
 # or
-$ yarn add --dev stylelint-config-udyux
+$ yarn add -D stylelint-config-udyux
 ```
 
 ## Usage
