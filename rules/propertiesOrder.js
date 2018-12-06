@@ -1,4 +1,5 @@
 module.exports = [
+  'content',
   'position',
   'top',
   'right',
@@ -6,7 +7,6 @@ module.exports = [
   'left',
   'float',
   'clear',
-  'content',
   'display',
   'appearance',
   'overflow',
