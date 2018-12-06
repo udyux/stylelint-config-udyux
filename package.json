@@ -5,6 +5,7 @@
   "author": "Nicolas Udy <dev@udy.io>",
   "main": "index.js",
   "files": [
+    "prettier.js",
     "rules/**/*"
   ],
   "repository": {
@@ -14,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@udyux/stylelint-order": "^2.1.1",
+    "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-declaration-block-no-ignored-properties": "^1.1.0",
