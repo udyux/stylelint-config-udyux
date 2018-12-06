@@ -8,13 +8,9 @@ module.exports = [
   { name: 'media', type: 'at-rule' },
   { hasBlock: true, type: 'at-rule' },
   { label: 'pseudo-content ("&::before/&::after")', selector: /^&?::(.|\n)+$/, type: 'rule' },
-  {
-    label: 'an attribute, pseudo-class or BEM modifier ("&[attr]/&:pseudo/&.-mod")',
-    selector: /^&(\[|:[^:]|\.-)(.|\n)+$/,
-    type: 'rule'
-  },
   { label: 'a twin selector ("& +/~ &")', selector: /^&\s?[~+]\s?&$/, type: 'rule' },
-  { label: 'sibling/child selector', selector: /^(?!&__)(.|\n)+$/, type: 'rule' },
+  { label: 'a BEM modifier or var content ("&.-mod/.--")', selector: /^(&\.-|\.--)(.|\n)+$/, type: 'rule' },
+  { label: 'a pseudo/attr (&:pseudo/&[attr]) or sibling/child selector', selector: /^(?!&__)(.|\n)+$/, type: 'rule' },
   { label: 'a BEM element ("&__elem")', selector: /^(&__(.|\n)+(,\n)?)+$/, type: 'rule' },
   { label: 'the first keyframe of an animation ("from/0%")', selector: /^(from|0%)$/, type: 'rule' },
   { label: 'an animation keyframe ("[1-99]%")', selector: /^(\d\d?%)$/, type: 'rule' },

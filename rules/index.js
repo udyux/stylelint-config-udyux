@@ -1,6 +1,8 @@
 const scssRules = require('./scss')
 const orderRules = require('./order')
 
+const namingPattern = /^[a-z_-]+$/
+
 module.exports = {
   ...scssRules,
   ...orderRules,
@@ -19,14 +21,14 @@ module.exports = {
   ],
   'at-rule-name-newline-after': 'always-multi-line',
   'at-rule-name-space-after': 'always-single-line',
-  'at-rule-name-case': null,
+  'at-rule-name-case': 'lower',
   'at-rule-semicolon-space-before': 'never',
   'block-closing-brace-newline-after': ['always', { ignoreAtRules: ['if', 'else'] }],
   'block-closing-brace-newline-before': 'always-multi-line',
   'block-closing-brace-empty-line-before': 'never',
   'block-opening-brace-newline-after': 'always-multi-line',
   'block-opening-brace-space-before': 'always',
-  'color-hex-case': null,
+  'color-hex-case': 'upper',
   'comment-empty-line-before': null,
   'declaration-bang-space-after': 'never',
   'declaration-bang-space-before': 'always',
@@ -47,6 +49,7 @@ module.exports = {
   'function-comma-space-after': 'always',
   'function-comma-space-before': 'never',
   'function-max-empty-lines': 0,
+  'function-name-case': 'lower',
   'function-parentheses-newline-inside': 'always-multi-line',
   'function-parentheses-space-inside': 'never',
   'function-url-quotes': ['always', { except: ['empty'] }],
@@ -62,7 +65,7 @@ module.exports = {
   'max-line-length': 120,
   'media-feature-colon-space-after': 'always',
   'media-feature-colon-space-before': 'never',
-  'media-feature-name-case': null,
+  'media-feature-name-case': 'lower',
   'media-feature-parentheses-space-inside': 'never',
   'media-query-list-comma-newline-after': 'always-multi-line',
   'media-query-list-comma-space-after': 'always-single-line',
@@ -72,7 +75,7 @@ module.exports = {
   'no-unknown-animations': true,
   'number-leading-zero': 'always',
   'number-no-trailing-zeros': null,
-  'property-case': null,
+  'property-case': 'lower',
   'rule-empty-line-before': [
     'always',
     {
@@ -81,7 +84,7 @@ module.exports = {
     }
   ],
   'selector-attribute-brackets-space-inside': 'never',
-  'selector-class-pattern': [/^[a-z-_]+/, { resolveNestedSelectors: true }],
+  'selector-class-pattern': [namingPattern, { resolveNestedSelectors: true }],
   'selector-combinator-space-after': 'always',
   'selector-combinator-space-before': 'always',
   'selector-descendant-combinator-no-non-space': true,
@@ -91,10 +94,11 @@ module.exports = {
   'selector-max-empty-lines': null,
   'selector-max-id': 0,
   'selector-no-qualifying-type': [true, { ignore: ['attribute'] }],
-  'selector-pseudo-class-case': null,
+  'selector-pseudo-class-case': 'lower',
   'selector-pseudo-class-parentheses-space-inside': 'never',
-  'selector-pseudo-element-case': null,
-  'unit-case': null,
+  'selector-pseudo-element-case': 'lower',
+  'selector-type-case': 'lower',
+  'unit-case': 'lower',
   'value-keyword-case': 'lower',
   'value-list-comma-newline-after': 'always-multi-line',
   'value-list-comma-newline-before': 'never-multi-line',
