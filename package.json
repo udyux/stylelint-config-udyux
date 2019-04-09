@@ -13,6 +13,9 @@
     "url": "https://github.com/udyux/stylelint-config-udyux.git"
   },
   "license": "MIT",
+  "scripts": {
+    "postversion": "git push --follow-tags"
+  },
   "dependencies": {
     "@udyux/stylelint-order": "^2.1.1",
     "stylelint-config-prettier": "^4.0.0",

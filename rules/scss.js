@@ -9,7 +9,6 @@ module.exports = {
   'scss/at-function-pattern': namingPattern,
   'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
   'scss/at-if-closing-brace-space-after': 'always-intermediate',
-  'scss/at-mixin-argumentless-call-parentheses': 'always',
   'scss/at-mixin-parentheses-space-before': 'never',
   'scss/at-mixin-pattern': namingPattern,
   'scss/declaration-nested-properties-no-divided-groups': true,
