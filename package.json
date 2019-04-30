@@ -17,13 +17,13 @@
     "postversion": "git push --follow-tags"
   },
   "dependencies": {
-    "@udyux/stylelint-order": "^2.1.1",
-    "stylelint-config-prettier": "^4.0.0",
-    "stylelint-config-recommended-scss": "^3.2.0",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-declaration-block-no-ignored-properties": "^1.1.0",
+    "@udyux/stylelint-order": "^3.1.1",
+    "stylelint-config-prettier": "^5.1.0",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
     "stylelint-declaration-strict-value": "^1.1.2",
-    "stylelint-scss": "^3.4.0"
+    "stylelint-scss": "^3.6.1"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
@@ -34,9 +34,9 @@
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "stylelint": "^9.8.0"
+    "stylelint": "^10.0.1"
   },
   "peerDependencies": {
-    "stylelint": ">=9"
+    "stylelint": "^10.0.1"
   }
 }
