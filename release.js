@@ -34,23 +34,6 @@ const parseVersionKeyword = bumpKeyword =>
       .join('.')
   })
 
-const argumentMap = new Map(
-  argv.reduce((argMap, arg) => {
-    const mappedFlag = arg.replace(regex.tagFlags, '--tag')
-    const [lastArg] = argMap.splice(-1)
-    if (!lastArg) return [mappedFlag]
-    return Array.isArray(lastArg) ? [...argMap, lastArg, mappedFlag] : [...argMap, [lastArg, arg]]
-  }, [])
-)
-
-const currentBranch = execSync(`git symbolic-ref HEAD | cut -d'/' -f3,4`)
-  .toString()
-  .trim()
-
-const argumentKeyValues = Array.from(argumentMap)
-  .reduce((args, v) => [...args, ...v], [])
-  .join(' ')
-
 if (!releaseVersion || !releaseVersion.length) {
   console.error('\nMissing version. Aborting release...')
   logVersionInfo()
@@ -63,16 +46,31 @@ if (!regex.validVersion.test(releaseVersion)) {
   process.exit(1)
 }
 
+const currentBranch = execSync(`git symbolic-ref HEAD | cut -d'/' -f3,4`)
+  .toString()
+  .trim()
+
 if (currentBranch !== 'master') {
   console.error('\nYou must be on branch `master`. Aborting release...\n')
   process.exit(1)
 }
 
+const argumentMap = new Map(
+  argv.reduce((argMap, arg) => {
+    const mappedFlag = arg.replace(regex.tagFlags, '--tag')
+    const [lastArg] = argMap.splice(-1)
+    if (!lastArg) return [mappedFlag]
+    return Array.isArray(lastArg) ? [...argMap, lastArg, mappedFlag] : [...argMap, [lastArg, arg]]
+  }, [])
+)
+
 const newVersion = regex.versionKeywords.test(releaseVersion) ? parseVersionKeyword(releaseVersion) : releaseVersion
 argumentMap.set('--new-version', newVersion)
 const releaseBranch = `release/${argumentMap.get('--new-version').replace(...regex.keepMajorMinor)}`
 
-execSync(`yarn publish ${argumentKeyValues}`)
+execSync(
+  `yarn publish ${Array.from(argumentMap).reduce((argString, keyVal) => `${argString} ${keyVal.join(' ')}`, '')}`
+)
 
 try {
   execSync(`git checkout -b ${releaseBranch} > /dev/null 2>&1`)
