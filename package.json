@@ -14,8 +14,9 @@
   },
   "license": "MIT",
   "scripts": {
+    "release": "node release",
     "lint": "eslint --fix index.js prettier.js rules/**/*.js",
-    "preversion": "eslint --fix index.js prettier.js rules/**/*.js",
+    "prepack": "yarn lint",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {
