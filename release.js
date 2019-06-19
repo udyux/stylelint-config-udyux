@@ -1,7 +1,7 @@
 const { execSync } = require('child_process')
 const { version } = require('./package.json')
 
-const [releaseVersion = '', argv] = process.argv.slice(2)
+const [releaseVersion = '', ...argv] = process.argv.slice(2)
 
 const regex = {
   keepMajorMinor: [/^(\d+\.\d+).*$/, '$1'],
