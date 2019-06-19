@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-udyux",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "An opinionated and portable stylelint config built around BEM.",
   "author": "Nicolas Udy <dev@udy.io>",
   "main": "index.js",
