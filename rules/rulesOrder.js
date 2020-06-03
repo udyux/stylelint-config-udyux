@@ -1,6 +1,7 @@
 module.exports = [
   'dollar-variables',
   { name: 'extend', type: 'at-rule' },
+  { hasBlock: false, name: 'include', parameter: 'type', type: 'at-rule' },
   'declarations',
   { hasBlock: false, type: 'at-rule' },
   { name: 'media', type: 'at-rule' },
