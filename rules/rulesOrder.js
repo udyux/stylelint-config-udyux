@@ -1,8 +1,8 @@
 module.exports = [
   'dollar-variables',
   { name: 'extend', type: 'at-rule' },
-  'declarations',
   { hasBlock: false, type: 'at-rule' },
+  'declarations',
   { name: 'media', type: 'at-rule' },
   { hasBlock: true, type: 'at-rule' },
   { label: 'pseudo-content ("&::before/&::after")', selector: /^&?::(.|\n)+$/, type: 'rule' },
