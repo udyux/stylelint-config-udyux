@@ -7,7 +7,6 @@ module.exports = {
   ...scssRules,
   ...orderRules,
   'plugin/declaration-block-no-ignored-properties': true,
-  'scale-unlimited/declaration-strict-value': ['/color/', { ignoreKeywords: ['white', 'black', 'transparent', 'inherit', 'currentColor'] }],
   'at-rule-empty-line-before': [
     'always',
     {
