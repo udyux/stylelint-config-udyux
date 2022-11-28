@@ -11,5 +11,6 @@ module.exports = [
   { label: 'a BEM element ("&__elem") or child', selector: /^(&__(.|\n)+(,\n)?|&\s|[a-z[.:])+$/, type: 'rule' },
   { label: 'the first keyframe of an animation', selector: /^(from|0%)$/, type: 'rule' },
   { label: 'an animation keyframe', selector: /^(\d\d?%)$/, type: 'rule' },
-  { label: 'the last keyframe of an animation ', selector: /^(to|100%)$/, type: 'rule' }
+  { label: 'the last keyframe of an animation ', selector: /^(to|100%)$/, type: 'rule' },
+  { name: 'return', type: 'at-rule' }
 ]
