@@ -7,7 +7,7 @@ module.exports = [
   { name: 'media', type: 'at-rule' },
   { hasBlock: true, type: 'at-rule' },
   { label: 'pseudo-content ("&::before/&::after")', selector: /^&?::(.|\n)+$/, type: 'rule' },
-  { label: 'a modifier or state', selector: /^(&:|&\.|&--)[^\s]+(,\n)?$/, type: 'rule' },
+  { label: 'a modifier or state', selector: /^(&:|&\.|&--)(.|\n)+(,\n)?$/, type: 'rule' },
   { label: 'a sibling relation selector', selector: /^&\s?[+~]\s?&$/, type: 'rule' },
   { label: 'a BEM element ("&__elem") or child', selector: /^(&__(.|\n)+(,\n)?|&\s|[a-z[.:])+$/, type: 'rule' },
   { label: 'the first keyframe of an animation', selector: /^(from|0%)$/, type: 'rule' },
