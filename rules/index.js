@@ -7,6 +7,7 @@ module.exports = {
   ...scssRules,
   ...orderRules,
   'plugin/declaration-block-no-ignored-properties': true,
+  'alpha-value-notation': 'number',
   'at-rule-empty-line-before': [
     'always',
     {
@@ -24,7 +25,8 @@ module.exports = {
   'block-closing-brace-empty-line-before': 'never',
   'block-opening-brace-newline-after': 'always-multi-line',
   'block-opening-brace-space-before': 'always',
-  'color-hex-case': 'upper',
+  'color-hex-case': 'lower',
+  'color-function-notation': null,
   'comment-empty-line-before': null,
   'declaration-bang-space-after': 'never',
   'declaration-bang-space-before': 'always',
@@ -45,7 +47,7 @@ module.exports = {
   'function-comma-space-after': 'always',
   'function-comma-space-before': 'never',
   'function-max-empty-lines': 0,
-  'function-name-case': 'lower',
+  'function-name-case': null,
   'function-parentheses-newline-inside': 'always-multi-line',
   'function-parentheses-space-inside': 'never',
   'function-url-quotes': ['always', { except: ['empty'] }],

@@ -2,6 +2,12 @@
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## 5.0.0
+
+- Support stylelint@14.
+- Upgraded all extended configs and plugins to latest versions.
+- Use plugin stylelint-order instead of @udyux/stylelint-order seeing as the added feature has been implemented.
+
 ## 2.0.1
 
 - Upgraded stylelint-declaration-strict-value to list stylelint 10 as a peer-dependency.
