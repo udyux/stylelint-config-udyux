@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## 5.1.0
+
+- Change order rules to be more permissive with modifier-parent selectors.
+
 ## 5.0.0
 
 - Support stylelint@14.

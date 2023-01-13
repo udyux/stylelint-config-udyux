@@ -30,6 +30,7 @@ module.exports = {
   'comment-empty-line-before': null,
   'declaration-bang-space-after': 'never',
   'declaration-bang-space-before': 'always',
+  'declaration-block-no-redundant-longhand-properties': null,
   'declaration-block-no-shorthand-property-overrides': true,
   'declaration-block-semicolon-newline-after': 'always',
   'declaration-block-semicolon-newline-before': 'never-multi-line',
