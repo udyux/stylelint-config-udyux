@@ -148,10 +148,12 @@ module.exports = [
   'font-weight',
   'line-height',
   'z-index',
+  'transition',
   'transition-property',
   'transition-duration',
   'transition-delay',
   'transition-timing-function',
+  'animation',
   'animation-name',
   'animation-duration',
   'animation-delay',
@@ -159,7 +161,5 @@ module.exports = [
   'animation-direction',
   'animation-fill-mode',
   'animation-iteration-count',
-  'animation-play-state',
-  'animation',
-  'transition'
+  'animation-play-state'
 ]
